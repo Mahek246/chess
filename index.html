@@ -1,0 +1,68 @@
+<style>
+    .chess {
+        padding-left: 300px;
+    }
+    .pink{
+        background: #7f3434;
+        height: 100px;
+        width: 100px;
+    }
+    .white{
+        background: #fff;
+        width: 100px;
+        height: 100px;
+    }
+    
+    
+</style>
+<div class="chess">
+    <table id="root" border="5"></table>
+    <div class="demo"></div>
+</div>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script>
+
+
+
+<script type="text/javascript">
+let root = document.getElementById('root');
+
+for (let i = 1; i <= 8; i++) {
+    let tr = document.createElement('tr');
+    if (i % 2 == 1) {
+        for (let j = 1; j <= 8; j++) {
+            if (j % 2 == 1) {
+                let td = document.createElement('td');
+                td.setAttribute('class', 'white');
+                ('white').innerHTML = 'done'
+
+                tr.appendChild(td);
+            }
+            else {
+                let td = document.createElement('td');
+                td.setAttribute('class', 'pink');
+                tr.appendChild(td);
+            }
+        }
+    }
+    else {
+        for (let j = 1; j <= 8; j++) {
+            if (j % 2 == 1) {
+                let td = document.createElement('td');
+                td.setAttribute('class', 'pink');
+                tr.appendChild(td);
+            }
+            else {
+                let td = document.createElement('td');
+                td.setAttribute('class', 'white');
+                tr.appendChild(td);
+            }
+        }
+    }
+
+    root.appendChild(tr);
+}
+
+</script>
